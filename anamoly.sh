@@ -12,7 +12,7 @@ SUBJECT="Weather Anomaly Alert"
 ANOMALY_OUTPUT=$($WEATHER_APP)
 
 # Check for anomalies and send an email if needed
-if [[ $ANOMALY_OUTPUT == *"Anomaly Detected"* ]]; then
+if [[ $ANOMALY_OUTPUT == *"anomaly detected!"* ]]; then
     # Prepare the email content with a subject and recipient
     EMAIL_CONTENT="Subject: $SUBJECT\nTo: $RECIPIENT_EMAIL\n\nAnomaly detected at $(date):\n$ANOMALY_OUTPUT"
 
